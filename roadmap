@@ -1,0 +1,182 @@
+Stage 1: Kubernetes Basics & Architecture (4–5 days)
+
+What is Kubernetes and why we use it
+Kubernetes architecture
+Control Plane vs Worker Nodes
+API Server
+etcd
+Scheduler
+Controller Manager
+Kubelet and Kube-proxy
+Container Runtime
+
+Stage 2: Pods, Deployments & Services (5–7 days)
+
+Pods
+ReplicaSets
+Deployments
+Rolling Updates & Rollbacks
+ClusterIP
+NodePort
+LoadBalancer
+Labels and Selectors
+
+Stage 3: Configuration & Storage (4–5 days)
+
+ConfigMaps
+Secrets
+Environment Variables
+Persistent Volumes (PV)
+Persistent Volume Claims (PVC)
+Storage Classes
+StatefulSets
+
+Stage 4: Networking & Traffic Management (5–7 days)
+
+Kubernetes Networking Model
+DNS and CoreDNS
+Ingress
+Ingress Controllers
+Network Policies
+Service Discovery
+Gateway API basics
+
+Stage 5: Kubernetes YAML & Helm (4–5 days)
+
+YAML manifests
+Kubernetes declarative approach
+Helm Charts
+Helm install, upgrade, rollback
+Values.yaml
+Template basics
+
+Stage 6: Scheduling & Resource Management (4–5 days)
+
+Resource Requests and Limits
+Liveness Probes
+Readiness Probes
+Startup Probes
+Node Selector
+Node Affinity
+Pod Affinity / Anti-affinity
+Taints and Tolerations
+Horizontal Pod Autoscaler (HPA)
+Pod Disruption Budgets (PDB)
+
+Stage 7: Security & RBAC (4–5 days)
+
+Authentication and Authorization
+RBAC
+Roles and ClusterRoles
+RoleBindings
+Service Accounts
+Security Context
+Pod Security Standards
+Secrets management
+Network Policies
+
+Stage 8: Troubleshooting & Debugging (7 days)
+
+kubectl commands
+kubectl describe
+kubectl logs
+kubectl exec
+CrashLoopBackOff
+ImagePullBackOff
+Pending Pods
+OOMKilled
+DNS troubleshooting
+Networking troubleshooting
+Events and logs
+
+==================================================================================
+
+Kubernetes – 10 core areas
+#
+
+Important area
+
+Kya seekhna hai
+
+1
+
+Architecture
+
+API Server, etcd, Scheduler, Controller Manager, Kubelet
+
+2
+
+Pods
+
+Pod lifecycle, multi-container pods, init containers
+
+3
+
+Deployments
+
+ReplicaSets, scaling, rolling updates, rollback
+
+4
+
+Services
+
+ClusterIP, NodePort, LoadBalancer
+
+5
+
+Storage
+
+PV, PVC, StorageClass, StatefulSets
+
+6
+
+Networking
+
+DNS, CoreDNS, Ingress, Network Policies
+
+7
+
+Helm
+
+Charts, values.yaml, templates, upgrade, rollback
+
+8
+
+Scheduling
+
+Requests, Limits, Affinity, Taints, Tolerations
+
+9
+
+Security
+
+RBAC, Roles, Service Accounts, Secrets, Security Context
+
+10
+
+Troubleshooting
+
+Logs, Events, CrashLoopBackOff, OOMKilled, Pending Pods
+
+Learning priority
+Recommended learning order
+Architecture
+
+Pods
+
+Deployments
+
+Services
+
+Storage
+
+Networking
+
+Helm
+
+Scheduling
+
+Security
+
+Troubleshooting
+
