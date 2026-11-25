@@ -15,7 +15,7 @@
 
 ### Hands-on
 
-- Install Minikube/Kind
+- Install Setup
 - Create Local Cluster
 - Explore kubectl commands
 
