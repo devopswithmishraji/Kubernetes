@@ -1,182 +1,442 @@
-Stage 1: Kubernetes Basics & Architecture (4–5 days)
+# ☸️ Kubernetes 
 
-What is Kubernetes and why we use it
-Kubernetes architecture
-Control Plane vs Worker Nodes
-API Server
-etcd
-Scheduler
-Controller Manager
-Kubelet and Kube-proxy
-Container Runtime
+---
 
-Stage 2: Pods, Deployments & Services (5–7 days)
+# 🚀 Phase 1 – Kubernetes Fundamentals
 
-Pods
-ReplicaSets
-Deployments
-Rolling Updates & Rollbacks
-ClusterIP
-NodePort
-LoadBalancer
-Labels and Selectors
+## Topics
 
-Stage 3: Configuration & Storage (4–5 days)
+- What is Kubernetes?
+- Why Kubernetes?
+- Container Orchestration
+- Kubernetes vs Docker
+- Kubernetes Components
+- kubectl Basics
 
-ConfigMaps
-Secrets
-Environment Variables
-Persistent Volumes (PV)
-Persistent Volume Claims (PVC)
-Storage Classes
-StatefulSets
+### Hands-on
 
-Stage 4: Networking & Traffic Management (5–7 days)
+- Install Minikube/Kind
+- Create Local Cluster
+- Explore kubectl commands
 
-Kubernetes Networking Model
-DNS and CoreDNS
-Ingress
-Ingress Controllers
-Network Policies
-Service Discovery
-Gateway API basics
+### Commands to Practice
 
-Stage 5: Kubernetes YAML & Helm (4–5 days)
+```bash
+kubectl version
+kubectl cluster-info
+kubectl get nodes
+kubectl get all
+kubectl explain pod
+```
 
-YAML manifests
-Kubernetes declarative approach
-Helm Charts
-Helm install, upgrade, rollback
-Values.yaml
-Template basics
+---
 
-Stage 6: Scheduling & Resource Management (4–5 days)
+# 🏗️ Phase 2 – Kubernetes Architecture
 
-Resource Requests and Limits
-Liveness Probes
-Readiness Probes
-Startup Probes
-Node Selector
-Node Affinity
-Pod Affinity / Anti-affinity
-Taints and Tolerations
-Horizontal Pod Autoscaler (HPA)
-Pod Disruption Budgets (PDB)
+## Learn
 
-Stage 7: Security & RBAC (4–5 days)
+- Control Plane
+- API Server
+- etcd
+- Scheduler
+- Controller Manager
+- kubelet
+- kube-proxy
+- Worker Nodes
 
-Authentication and Authorization
-RBAC
-Roles and ClusterRoles
-RoleBindings
-Service Accounts
-Security Context
-Pod Security Standards
-Secrets management
-Network Policies
+### Goal
 
-Stage 8: Troubleshooting & Debugging (7 days)
+Understand how a Kubernetes cluster works internally.
 
-kubectl commands
+---
+
+# 📦 Phase 3 – Pods
+
+## Learn
+
+- Pod
+- Multi-container Pod
+- Labels
+- Selectors
+- Init Containers
+- Sidecar Containers
+
+### Hands-on
+
+- Create Pod
+- Describe Pod
+- View Logs
+- Execute Commands inside Pod
+- Delete Pod
+
+---
+
+# 🚀 Phase 4 – ReplicaSets & Deployments
+
+## Learn
+
+- ReplicaSet
+- Deployment
+- Rolling Updates
+- Rollback
+- Scaling
+
+### Hands-on
+
+- Deploy Nginx
+- Scale Replicas
+- Rollback Deployment
+
+---
+
+# 🌐 Phase 5 – Services
+
+## Learn
+
+- ClusterIP
+- NodePort
+- LoadBalancer
+- ExternalName
+- DNS
+- Service Discovery
+
+### Hands-on
+
+- Expose Deployment
+- Access Application
+- Test Connectivity
+
+---
+
+# 📁 Phase 6 – Namespaces
+
+## Learn
+
+- Namespace
+- Resource Isolation
+- Default Namespace
+- Custom Namespace
+
+### Hands-on
+
+- Create Namespace
+- Deploy Resources into Namespace
+
+---
+
+# ⚙️ Phase 7 – Configuration Management
+
+## ConfigMaps
+
+- Environment Variables
+- Mount ConfigMap
+
+## Secrets
+
+- Opaque Secrets
+- Docker Registry Secrets
+- TLS Secrets
+
+### Hands-on
+
+- Store Application Configuration
+- Store Passwords
+- Mount ConfigMap & Secret
+
+---
+
+# 💾 Phase 8 – Storage
+
+## Learn
+
+- emptyDir
+- hostPath
+- Persistent Volume (PV)
+- Persistent Volume Claim (PVC)
+- StorageClass
+- Dynamic Provisioning
+
+### Hands-on
+
+Deploy:
+
+- MySQL
+- PostgreSQL
+
+Verify data persistence.
+
+---
+
+# 🌍 Phase 9 – Kubernetes Networking
+
+## Learn
+
+- Pod Networking
+- Service Networking
+- CoreDNS
+- CNI
+- Ingress
+- Network Policies
+
+### Hands-on
+
+- Install Ingress Controller
+- Configure Ingress
+- Apply Network Policies
+
+---
+
+# 🎯 Phase 10 – Scheduling & Workloads
+
+## Scheduling
+
+- Node Selector
+- Node Affinity
+- Taints
+- Tolerations
+
+## Workloads
+
+- Jobs
+- CronJobs
+- DaemonSets
+- StatefulSets
+
+### Hands-on
+
+- Scheduled Backup
+- Logging Daemon
+- Database Deployment
+
+---
+
+# 🔐 Phase 11 – Security
+
+## Learn
+
+- Service Accounts
+- RBAC
+- Roles
+- ClusterRoles
+- RoleBindings
+- Security Context
+- Image Pull Secrets
+
+### Hands-on
+
+- Create User Permissions
+- Restrict Access
+- Test Authorization
+
+---
+
+# ❤️ Phase 12 – Health Checks
+
+## Learn
+
+- Liveness Probe
+- Readiness Probe
+- Startup Probe
+
+### Hands-on
+
+- Simulate Application Failure
+- Observe Self-Healing
+
+---
+
+# 📈 Phase 13 – Autoscaling
+
+## Learn
+
+- Metrics Server
+- Horizontal Pod Autoscaler (HPA)
+- Vertical Pod Autoscaler (VPA)
+- Cluster Autoscaler
+- Karpenter
+
+### Hands-on
+
+- Scale Pods Automatically
+- Scale Cluster Nodes
+
+---
+
+# 📊 Phase 14 – Observability
+
+## Learn
+
+- Metrics Server
+- Prometheus
+- Grafana
+- Alertmanager
+- Logging (EFK/ELK)
+
+### Hands-on
+
+- Install Prometheus
+- Create Dashboards
+- Configure Alerts
+
+---
+
+# 🛠️ Phase 15 – Troubleshooting
+
+## Practice Debugging
+
+- CrashLoopBackOff
+- ImagePullBackOff
+- Pending Pods
+- OOMKilled
+- PVC Pending
+- DNS Issues
+- Scheduling Failures
+- Networking Problems
+
+### Important Commands
+
+```bash
 kubectl describe
 kubectl logs
 kubectl exec
-CrashLoopBackOff
-ImagePullBackOff
-Pending Pods
-OOMKilled
-DNS troubleshooting
-Networking troubleshooting
-Events and logs
+kubectl top
+kubectl get events
+kubectl debug
+```
 
-==================================================================================
+---
 
-Kubernetes – 10 core areas
-#
+# 📦 Phase 16 – Helm
 
-Important area
+## Learn
 
-Kya seekhna hai
+- Helm Basics
+- Helm Repository
+- Helm Charts
+- Values.yaml
+- Upgrade
+- Rollback
 
-1
+### Hands-on
 
-Architecture
+Install applications using Helm.
 
-API Server, etcd, Scheduler, Controller Manager, Kubelet
+---
 
-2
+# ☁️ Phase 17 – Amazon EKS
 
-Pods
+## Learn
 
-Pod lifecycle, multi-container pods, init containers
+- Create EKS Cluster
+- Worker Nodes
+- IAM Roles
+- ECR
+- ALB Ingress Controller
+- EBS CSI Driver
+- Cluster Autoscaler
 
-3
+### Hands-on
 
-Deployments
+Deploy an application on Amazon EKS.
 
-ReplicaSets, scaling, rolling updates, rollback
+---
 
-4
+# 🔄 Phase 18 – GitOps with Argo CD
 
-Services
+## Learn
 
-ClusterIP, NodePort, LoadBalancer
+- GitOps Principles
+- Argo CD Installation
+- Application Sync
+- Auto Sync
+- Rollback
 
-5
+### Hands-on
 
-Storage
+Deploy applications directly from GitHub.
 
-PV, PVC, StorageClass, StatefulSets
+---
 
-6
+# 🚀 Phase 19 – Production Project
 
-Networking
+Build a complete production-ready Kubernetes project using:
 
-DNS, CoreDNS, Ingress, Network Policies
+- GitHub
+- Jenkins / GitHub Actions
+- Docker
+- Trivy
+- Kubernetes
+- Helm
+- Argo CD
+- Prometheus
+- Grafana
+- Amazon EKS
 
-7
+---
 
-Helm
+# 💼 Interview Preparation Checklist
 
-Charts, values.yaml, templates, upgrade, rollback
+Master the following Kubernetes resources:
 
-8
+- Pod
+- ReplicaSet
+- Deployment
+- Service
+- Namespace
+- ConfigMap
+- Secret
+- Persistent Volume (PV)
+- Persistent Volume Claim (PVC)
+- StorageClass
+- Ingress
+- Job
+- CronJob
+- DaemonSet
+- StatefulSet
+- NetworkPolicy
+- ServiceAccount
+- Role
+- RoleBinding
+- ClusterRole
+- ClusterRoleBinding
+- Horizontal Pod Autoscaler (HPA)
 
-Scheduling
+---
 
-Requests, Limits, Affinity, Taints, Tolerations
+# 🔧 Essential kubectl Commands
 
-9
+```bash
+kubectl get
+kubectl describe
+kubectl logs
+kubectl exec
+kubectl apply
+kubectl delete
+kubectl edit
+kubectl expose
+kubectl rollout
+kubectl scale
+kubectl top
+kubectl config
+kubectl cordon
+kubectl uncordon
+kubectl drain
+kubectl debug
+```
 
-Security
+---
 
-RBAC, Roles, Service Accounts, Secrets, Security Context
+# 🎯 Final Outcome
 
-10
+After completing this roadmap, you will be able to:
 
-Troubleshooting
-
-Logs, Events, CrashLoopBackOff, OOMKilled, Pending Pods
-
-Learning priority
-Recommended learning order
-Architecture
-
-Pods
-
-Deployments
-
-Services
-
-Storage
-
-Networking
-
-Helm
-
-Scheduling
-
-Security
-
-Troubleshooting
-
+- ✅ Work confidently with Kubernetes
+- ✅ Deploy production-ready applications
+- ✅ Manage networking and storage
+- ✅ Secure Kubernetes clusters
+- ✅ Monitor workloads using Prometheus & Grafana
+- ✅ Troubleshoot production issues
+- ✅ Deploy applications on Amazon EKS
+- ✅ Implement GitOps using Argo CD
+- ✅ Build real-world DevOps projects
+- ✅ Crack Kubernetes and DevOps Engineer interviews
